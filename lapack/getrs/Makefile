@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = sgetrs_N_single.$(SUFFIX) sgetrs_T_single.$(SUFFIX)
 DBLASOBJS = dgetrs_N_single.$(SUFFIX) dgetrs_T_single.$(SUFFIX)
@@ -233,4 +233,4 @@ xgetrs_R_parallel.$(PSUFFIX) : zgetrs_parallel.c
 xgetrs_C_parallel.$(PSUFFIX) : zgetrs_parallel.c
 	$(CC) -c $(PFLAGS) -DCOMPLEX -DXDOUBLE -DTRANS=4 $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail

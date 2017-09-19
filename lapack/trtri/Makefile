@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = strtri_UU_single.$(SUFFIX) strtri_UN_single.$(SUFFIX) strtri_LU_single.$(SUFFIX) strtri_LN_single.$(SUFFIX)
 
@@ -311,4 +311,4 @@ xtrtri_LU_parallel.$(PSUFFIX) : trtri_L_parallel.c
 xtrtri_LN_parallel.$(PSUFFIX) : trtri_L_parallel.c
 	$(CC) -c $(PFLAGS) -DCOMPLEX -DXDOUBLE -UUNIT $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail

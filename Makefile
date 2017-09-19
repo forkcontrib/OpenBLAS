@@ -1,5 +1,5 @@
 TOPDIR	= .
-include ./Makefile.system
+include ./makefiles/Makefile.system
 
 BLASDIRS = interface driver/level2 driver/level3 driver/others
 

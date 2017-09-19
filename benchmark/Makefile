@@ -2343,5 +2343,5 @@ smallscaling: smallscaling.c ../$(LIBNAME)
 clean ::
 	@rm -f *.goto *.mkl *.acml *.atlas *.veclib *.essl smallscaling
 
-include $(TOPDIR)/Makefile.tail
+include $(TOPDIR)/makefiles/Makefile.tail
 

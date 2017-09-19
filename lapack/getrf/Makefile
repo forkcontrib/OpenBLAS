@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = sgetrf_single.$(SUFFIX)
 DBLASOBJS = dgetrf_single.$(SUFFIX)
@@ -95,4 +95,4 @@ zgetrf_parallel.$(PSUFFIX) : $(GETRF_SRC)
 xgetrf_parallel.$(PSUFFIX) : $(GETRF_SRC)
 	$(CC) -c $(PFLAGS) -DXDOUBLE -DCOMPLEX -DUNIT $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail

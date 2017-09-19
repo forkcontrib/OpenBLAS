@@ -1,5 +1,5 @@
 TOPDIR	= ..
-include ../Makefile.system
+include ../makefiles/Makefile.system
 
 all :: level1 level2 level3
 

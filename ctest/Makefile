@@ -3,7 +3,7 @@
 #
 
 TOPDIR = ..
-include $(TOPDIR)/Makefile.system
+include $(TOPDIR)/makefiles/Makefile.system
 
 override CFLAGS += -DADD$(BU) -DCBLAS
 
@@ -143,4 +143,4 @@ xzcblat3_3m: $(ztestl3o_3m) c_zblat3_3m.o $(TOPDIR)/$(LIBNAME)
 	$(FC) $(FLDFLAGS) -o xzcblat3_3m c_zblat3_3m.o $(ztestl3o_3m) $(LIB) $(EXTRALIB) $(CEXTRALIB)
 
 
-include $(TOPDIR)/Makefile.tail
+include $(TOPDIR)/makefiles/Makefile.tail

@@ -30,7 +30,7 @@ endif
 # Default Fortran compiler (FC) is selected by f_check.
 
 ifndef MAKEFILE_RULE
-include $(TOPDIR)/Makefile.rule
+include $(TOPDIR)/makefiles/Makefile.rule
 else
 include $(TOPDIR)/$(MAKEFILE_RULE)
 endif
@@ -170,7 +170,7 @@ DUMMY := $(shell $(MAKE) -C $(TOPDIR) -f Makefile.prebuild CC="$(CC)" FC="$(FC)"
 ifndef TARGET_CORE
 include $(TOPDIR)/Makefile.conf
 else
-include $(TOPDIR)/Makefile_kernel.conf
+include $(TOPDIR)/makefiles/Makefile_kernel.conf
 endif
 
 endif
@@ -971,7 +971,7 @@ endif
 
 KERNELDIR	= $(TOPDIR)/kernel/$(ARCH)
 
-include $(TOPDIR)/Makefile.$(ARCH)
+include $(TOPDIR)/makefiles/Makefile.$(ARCH)
 
 CCOMMON_OPT	+= -DASMNAME=$(FU)$(*F) -DASMFNAME=$(FU)$(*F)$(BU) -DNAME=$(*F)$(BU) -DCNAME=$(*F) -DCHAR_NAME=\"$(*F)$(BU)\" -DCHAR_CNAME=\"$(*F)\"
 

@@ -1,6 +1,6 @@
 ifndef INCLUDED
 TOPDIR = ../../..
-include $(TOPDIR)/Makefile.system
+include $(TOPDIR)/makefiles/Makefile.system
 endif
 
 ifndef LASWP
@@ -17,7 +17,7 @@ LASWP_DEPS  = ../generic/laswp_k_1.c ../generic/laswp_k_2.c \
 ZLASWP_DEPS = ../generic/zlaswp_k_1.c ../generic/zlaswp_k_2.c \
 	      ../generic/zlaswp_k_4.c
 
-include ../../../Makefile.tail
+include ../../../makefiles/Makefile.tail
 
 all:
 

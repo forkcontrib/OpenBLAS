@@ -164,7 +164,7 @@ XBLASOBJS	+=
 
 endif
 
-include $(TOPDIR)/Makefile.tail
+include $(TOPDIR)/makefiles/Makefile.tail
 
 all :: libs
 

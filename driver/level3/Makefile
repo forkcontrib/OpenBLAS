@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 USE_GEMM3M = 0
 
@@ -5021,4 +5021,4 @@ xtrsm_RCLU.$(PSUFFIX) : trsm_R.c
 xtrsm_RCLN.$(PSUFFIX) : trsm_R.c
 	$(CC) -c $(PFLAGS) -DCOMPLEX -DXDOUBLE -DTRANSA -UUPPER -UUNIT -DCONJ $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail

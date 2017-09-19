@@ -1,5 +1,5 @@
 TOPDIR	= ..
-include ../Makefile.system
+include ../makefiles/Makefile.system
 
 #SUBDIRS	= laswp getf2 getrf potf2 potrf lauu2 lauum trti2 trtri getrs
 SUBDIRS	= getrf getf2 laswp getrs potrf potf2 lauu2 lauum trti2 trtri

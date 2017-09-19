@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = strti2_UU.$(SUFFIX) strti2_UN.$(SUFFIX) strti2_LU.$(SUFFIX) strti2_LN.$(SUFFIX)
 DBLASOBJS = dtrti2_UU.$(SUFFIX) dtrti2_UN.$(SUFFIX) dtrti2_LU.$(SUFFIX) dtrti2_LN.$(SUFFIX)
@@ -152,4 +152,4 @@ xtrti2_LU.$(PSUFFIX) : ztrti2_L.c
 xtrti2_LN.$(PSUFFIX) : ztrti2_L.c
 	$(CC) -c $(PFLAGS) -DCOMPLEX -DXDOUBLE -UUNIT $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail

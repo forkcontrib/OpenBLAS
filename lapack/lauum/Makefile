@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = slauum_U_single.$(SUFFIX) slauum_L_single.$(SUFFIX)
 DBLASOBJS = dlauum_U_single.$(SUFFIX) dlauum_L_single.$(SUFFIX)
@@ -161,4 +161,4 @@ xlauum_U_parallel.$(PSUFFIX) : lauum_U_parallel.c
 xlauum_L_parallel.$(PSUFFIX) : lauum_L_parallel.c
 	$(CC) -c $(PFLAGS) -DCOMPLEX -DXDOUBLE $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail

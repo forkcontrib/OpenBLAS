@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = slaswp_plus.$(SUFFIX) slaswp_minus.$(SUFFIX)
 DBLASOBJS = dlaswp_plus.$(SUFFIX) dlaswp_minus.$(SUFFIX)
@@ -18,5 +18,5 @@ claswp_plus.$(PSUFFIX) claswp_minus.$(PSUFFIX) zlaswp_plus.$(PSUFFIX) zlaswp_min
 xlaswp_plus.$(PSUFFIX) xlaswp_minus.$(PSUFFIX) : dummy
 	cd $(ARCH) && $(MAKE) ../$(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail
 

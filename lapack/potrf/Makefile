@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = spotrf_U_single.$(SUFFIX) spotrf_L_single.$(SUFFIX)
 DBLASOBJS = dpotrf_U_single.$(SUFFIX) dpotrf_L_single.$(SUFFIX)
@@ -161,4 +161,4 @@ xpotrf_U_parallel.$(PSUFFIX) : potrf_U_parallel.c
 xpotrf_L_parallel.$(PSUFFIX) : potrf_L_parallel.c
 	$(CC) -c $(PFLAGS) -DCOMPLEX -DXDOUBLE $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail

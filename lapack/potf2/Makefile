@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = spotf2_U.$(SUFFIX) spotf2_L.$(SUFFIX)
 DBLASOBJS = dpotf2_U.$(SUFFIX) dpotf2_L.$(SUFFIX)
@@ -80,4 +80,4 @@ xpotf2_U.$(PSUFFIX) : zpotf2_U.c
 xpotf2_L.$(PSUFFIX) : zpotf2_L.c
 	$(CC) -c $(PFLAGS) -DCOMPLEX -DXDOUBLE $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail

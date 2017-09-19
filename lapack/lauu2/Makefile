@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = slauu2_U.$(SUFFIX) slauu2_L.$(SUFFIX)
 DBLASOBJS = dlauu2_U.$(SUFFIX) dlauu2_L.$(SUFFIX)
@@ -80,4 +80,4 @@ xlauu2_U.$(PSUFFIX) : zlauu2_U.c
 xlauu2_L.$(PSUFFIX) : zlauu2_L.c
 	$(CC) -c $(PFLAGS) -DCOMPLEX -DXDOUBLE $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail

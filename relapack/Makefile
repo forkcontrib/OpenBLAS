@@ -1,5 +1,5 @@
 TOPDIR  = ..
-include $(TOPDIR)/Makefile.system
+include $(TOPDIR)/makefiles/Makefile.system
 
 
 

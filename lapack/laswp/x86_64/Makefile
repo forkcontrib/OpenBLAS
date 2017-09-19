@@ -1,5 +1,5 @@
 TOPDIR	= ../../..
-include ../../../Makefile.system
+include ../../../makefiles/Makefile.system
 
 ifeq ($(CORE), PENRYN)
 LASWP	= ../generic/laswp_k_4.c

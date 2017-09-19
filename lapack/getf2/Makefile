@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = sgetf2_k.$(SUFFIX)
 DBLASOBJS = dgetf2_k.$(SUFFIX)
@@ -44,6 +44,6 @@ zgetf2_k.$(PSUFFIX) : zgetf2_k.c
 xgetf2_k.$(PSUFFIX) : zgetf2_k.c
 	$(CC) -c $(PFLAGS) -DCOMPLEX -DXDOUBLE $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail
 
 

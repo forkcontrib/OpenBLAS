@@ -1,5 +1,5 @@
 TOPDIR	= ../..
-include ../../Makefile.system
+include ../../makefiles/Makefile.system
 
 SBLASOBJS = \
 	sgbmv_n.$(SUFFIX) sgbmv_t.$(SUFFIX) \
@@ -3615,4 +3615,4 @@ xtrsv_CUU.$(SUFFIX)  xtrsv_CUU.$(PSUFFIX)  : ztrsv_L.c ../../param.h
 xtrsv_CUN.$(SUFFIX)  xtrsv_CUN.$(PSUFFIX)  : ztrsv_L.c ../../param.h
 	$(CC) -c $(CFLAGS) -DXDOUBLE -DCOMPLEX -DTRANSA=4 -UUNIT $< -o $(@F)
 
-include ../../Makefile.tail
+include ../../makefiles/Makefile.tail
