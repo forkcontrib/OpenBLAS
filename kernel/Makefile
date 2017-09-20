@@ -53,9 +53,9 @@ SBLASOBJS	+= setparam$(TSUFFIX).$(SUFFIX)
 CCOMMON_OPT	+= -DTS=$(TSUFFIX)
 endif
 
-KERNEL_INTERFACE = ../common_level1.h ../common_level2.h ../common_level3.h
+KERNEL_INTERFACE = ../includes/common_level1.h ../includes/common_level2.h ../includes/common_level3.h
 ifneq ($(NO_LAPACK), 1)
-KERNEL_INTERFACE += ../common_lapack.h
+KERNEL_INTERFACE += ../includes/common_lapack.h
 endif
 
 ifeq ($(ARCH), x86)

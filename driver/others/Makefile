@@ -85,7 +85,7 @@ dynamic.$(SUFFIX) : dynamic.c
 dynamic.$(PSUFFIX) : dynamic.c
 	$(CC) $(PFLAGS) -c $< -o $(@F)
 
-parameter.$(SUFFIX) : parameter.c ../../param.h
+parameter.$(SUFFIX) : parameter.c ../../includes/param.h
 	$(CC) $(CFLAGS) -c $< -o $(@F)
 
 init.$(SUFFIX) : init.c
@@ -94,10 +94,10 @@ init.$(SUFFIX) : init.c
 profile.$(SUFFIX) : profile.c
 	$(CC) $(CFLAGS) -c $< -o $(@F)
 
-memory.$(SUFFIX) : $(MEMORY) ../../common.h ../../param.h
+memory.$(SUFFIX) : $(MEMORY) ../../includes/common.h ../../includes/param.h
 	$(CC) $(CFLAGS) -c $< -o $(@F)
 
-blas_server.$(SUFFIX) : $(BLAS_SERVER) ../../common.h ../../common_thread.h ../../param.h
+blas_server.$(SUFFIX) : $(BLAS_SERVER) ../../includes/common.h ../../includes/common_thread.h ../../includes/param.h
 	$(CC) $(CFLAGS) -c $< -o $(@F)
 
 openblas_set_num_threads.$(SUFFIX) : openblas_set_num_threads.c
@@ -121,7 +121,7 @@ openblas_error_handle.$(SUFFIX) : openblas_error_handle.c
 openblas_env.$(SUFFIX) : openblas_env.c
 	$(CC) $(CFLAGS) -c $< -o $(@F)
 
-blasL1thread.$(SUFFIX) : blas_l1_thread.c ../../common.h ../../common_thread.h
+blasL1thread.$(SUFFIX) : blas_l1_thread.c ../../includes/common.h ../../includes/common_thread.h
 	$(CC) $(CFLAGS) -c $< -o $(@F)
 
 cuda_init.$(SUFFIX) : cuda_init.c
@@ -169,7 +169,7 @@ mulx.$(SUFFIX) : $(ARCH)/mulx.c
 xerbla.$(PSUFFIX) : xerbla.c
 	$(CC) $(PFLAGS) -c $< -o $(@F)
 
-parameter.$(PSUFFIX) : parameter.c ../../param.h
+parameter.$(PSUFFIX) : parameter.c ../../includes/param.h
 	$(CC) $(PFLAGS) -c $< -o $(@F)
 
 init.$(PSUFFIX) : init.c
@@ -178,13 +178,13 @@ init.$(PSUFFIX) : init.c
 profile.$(PSUFFIX) : profile.c
 	$(CC) $(PFLAGS) -c $< -o $(@F)
 
-memory.$(PSUFFIX) : $(MEMORY) ../../common.h ../../param.h
+memory.$(PSUFFIX) : $(MEMORY) ../../includes/common.h ../../includes/param.h
 	$(CC) $(PFLAGS) -c $< -o $(@F)
 
-blas_server.$(PSUFFIX) : $(BLAS_SERVER) ../../common.h ../../common_thread.h
+blas_server.$(PSUFFIX) : $(BLAS_SERVER) ../../includes/common.h ../../includes/common_thread.h
 	$(CC) $(PFLAGS) -c $< -o $(@F)
 
-blasL1thread.$(PSUFFIX) : blas_l1_thread.c ../../common.h ../../common_thread.h
+blasL1thread.$(PSUFFIX) : blas_l1_thread.c ../../includes/common.h ../../includes/common_thread.h
 	$(CC) $(PFLAGS) -c $< -o $(@F)
 
 cuda_init.$(PSUFFIX) : cuda_init.c
@@ -229,7 +229,7 @@ addx.$(PSUFFIX) : $(ARCH)/addx.c
 mulx.$(PSUFFIX) : $(ARCH)/mulx.c
 	$(CC) $(PFLAGS) -c -DXDOUBLE -UCOMPLEX $< -o $(@F)
 
-info.$(SUFFIX) : info.c info.h ../../common.h ../../param.h
+info.$(SUFFIX) : info.c info.h ../../includes/common.h ../../includes/param.h
 	$(CC) $(CFLAGS) -c $< -o $(@F)
 
 

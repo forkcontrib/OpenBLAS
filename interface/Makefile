@@ -1185,22 +1185,22 @@ zhpr2.$(SUFFIX) zhpr2.$(PSUFFIX) : zhpr2.c
 xhpr2.$(SUFFIX) xhpr2.$(PSUFFIX) : zhpr2.c
 	$(CC) -c $(CFLAGS) $< -o $(@F)
 
-sgemm.$(SUFFIX) sgemm.$(PSUFFIX) : gemm.c ../param.h
+sgemm.$(SUFFIX) sgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -c $(CFLAGS) $< -o $(@F)
 
-dgemm.$(SUFFIX) dgemm.$(PSUFFIX) : gemm.c ../param.h
+dgemm.$(SUFFIX) dgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -c $(CFLAGS) $< -o $(@F)
 
-qgemm.$(SUFFIX) qgemm.$(PSUFFIX) : gemm.c ../param.h
+qgemm.$(SUFFIX) qgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -c $(CFLAGS) $< -o $(@F)
 
-cgemm.$(SUFFIX) cgemm.$(PSUFFIX) : gemm.c ../param.h
+cgemm.$(SUFFIX) cgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -c $(CFLAGS) $< -o $(@F)
 
-zgemm.$(SUFFIX) zgemm.$(PSUFFIX) : gemm.c ../param.h
+zgemm.$(SUFFIX) zgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -c $(CFLAGS) $< -o $(@F)
 
-xgemm.$(SUFFIX) xgemm.$(PSUFFIX) : gemm.c ../param.h
+xgemm.$(SUFFIX) xgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -c $(CFLAGS) $< -o $(@F)
 
 ssymm.$(SUFFIX) ssymm.$(PSUFFIX) : symm.c
@@ -1707,16 +1707,16 @@ cblas_chemv.$(SUFFIX) cblas_chemv.$(PSUFFIX) : zhemv.c
 cblas_zhemv.$(SUFFIX) cblas_zhemv.$(PSUFFIX) : zhemv.c
 	$(CC) -DCBLAS -c $(CFLAGS) $< -o $(@F)
 
-cblas_sgemm.$(SUFFIX) cblas_sgemm.$(PSUFFIX) : gemm.c ../param.h
+cblas_sgemm.$(SUFFIX) cblas_sgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -DCBLAS -c $(CFLAGS) $< -o $(@F)
 
-cblas_dgemm.$(SUFFIX) cblas_dgemm.$(PSUFFIX) : gemm.c ../param.h
+cblas_dgemm.$(SUFFIX) cblas_dgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -DCBLAS -c $(CFLAGS) $< -o $(@F)
 
-cblas_cgemm.$(SUFFIX) cblas_cgemm.$(PSUFFIX) : gemm.c ../param.h
+cblas_cgemm.$(SUFFIX) cblas_cgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -DCBLAS -c $(CFLAGS) $< -o $(@F)
 
-cblas_zgemm.$(SUFFIX) cblas_zgemm.$(PSUFFIX) : gemm.c ../param.h
+cblas_zgemm.$(SUFFIX) cblas_zgemm.$(PSUFFIX) : gemm.c ../includes/param.h
 	$(CC) -DCBLAS -c $(CFLAGS) $< -o $(@F)
 
 cblas_ssymm.$(SUFFIX) cblas_ssymm.$(PSUFFIX) : symm.c

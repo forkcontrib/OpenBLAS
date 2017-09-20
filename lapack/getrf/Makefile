@@ -41,22 +41,22 @@ zgetrf_single.$(SUFFIX) : getrf_single.c
 xgetrf_single.$(SUFFIX) : getrf_single.c
 	$(CC) -c $(CFLAGS) -DXDOUBLE -DCOMPLEX -DUNIT $< -o $(@F)
 
-sgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../param.h
+sgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../includes/param.h
 	$(CC) -c $(CFLAGS) -UDOUBLE -UCOMPLEX -DUNIT $< -o $(@F)
 
-dgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../param.h
+dgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../includes/param.h
 	$(CC) -c $(CFLAGS) -DDOUBLE -UCOMPLEX -DUNIT $< -o $(@F)
 
-qgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../param.h
+qgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../includes/param.h
 	$(CC) -c $(CFLAGS) -DXDOUBLE -UCOMPLEX -DUNIT $< -o $(@F)
 
-cgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../param.h
+cgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../includes/param.h
 	$(CC) -c $(CFLAGS) -UDOUBLE -DCOMPLEX -DUNIT $< -o $(@F)
 
-zgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../param.h
+zgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../includes/param.h
 	$(CC) -c $(CFLAGS) -DDOUBLE -DCOMPLEX -DUNIT $< -o $(@F)
 
-xgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../param.h
+xgetrf_parallel.$(SUFFIX) : $(GETRF_SRC) ../../includes/param.h
 	$(CC) -c $(CFLAGS) -DXDOUBLE -DCOMPLEX -DUNIT $< -o $(@F)
 
 sgetrf_single.$(PSUFFIX) : getrf_single.c
